@@ -306,7 +306,7 @@ def api_books():
     genre_filter = request.args.get("genre")
 
     if genre_filter:
-        # Normalize category names for matching (e.g., handles spaces/slashes)
+        # Normalize the category names for matching (e.g., handles spaces/slashes)
         normalized_filter = genre_filter.lower().replace("/", "").replace(" ", "")
         
         filtered_posts = [
